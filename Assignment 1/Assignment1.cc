@@ -9,10 +9,10 @@ int main()
     cout << "***MY PHONEBOOK APPLICATION***";
 
     Phonebook contacts;
-    string name, first, last, number;
+    string name, first, last, number; // variables for user interface.
 
     ifstream f;
-    f.open("phonebook.txt");
+    f.open("phonebook.txt"); // import file and dump into vector.
     while (!f.eof())
     {
         f >> first >> last >> number;
@@ -20,7 +20,7 @@ int main()
     }
     f.close();
 
-    while (true)
+    while (true) // user interface, switch statement while true, q to exit.
     {
         cout << "Please choose an operation:\nA(Add) | S (Search) | D(Delete) |L(List) |Q(Quit): ";
         char ch;
